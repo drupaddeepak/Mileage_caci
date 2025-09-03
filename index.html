@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mileage Calculator - Fuel Efficiency Tool</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mileage Calculator</h1>
+            <p>Calculate your fuel efficiency and travel costs</p>
+            <div id="locationInfo" class="location-info" style="display: none;">
+                <span id="locationText">📍 Detected location: </span>
+                <span id="countryName">Loading...</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="calculator-card">
+                <form id="mileageForm" class="calculator-form">
+                    <div class="input-group">
+                        <label for="distance" id="distanceLabel">Distance Traveled (km)</label>
+                        <input type="number" id="distance" name="distance" step="0.1" min="0" placeholder="Enter distance in kilometers" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fuelType">Fuel Type</label>
+                        <select id="fuelType" name="fuelType" class="fuel-selector">
+                            <option value="petrol">⛽ Petrol/Gasoline</option>
+                            <option value="diesel">🛢️ Diesel</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="fuel" id="fuelLabel">Fuel Consumed (liters)</label>
+                        <input type="number" id="fuel" name="fuel" step="0.01" min="0" placeholder="Enter fuel consumed in liters" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="price" id="priceLabel">Fuel Price per Liter (₹)</label>
+                        <input type="number" id="price" name="price" step="0.01" min="0" placeholder="Enter current fuel price" required>
+                        <div id="autoPriceInfo" class="auto-price-info" style="display: none;">
+                            <small>💡 Auto-detected price: <span id="autoPrice">-</span> <span id="autoPriceCurrency">₹</span></small>
+                            <button type="button" id="useAutoPrice" class="use-auto-btn">Use Auto Price</button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="calculate-btn">Calculate Mileage</button>
+                </form>
+
+                <div id="results" class="results-section" style="display: none;">
+                    <h3>Calculation Results</h3>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-label" id="efficiencyLabel">Fuel Efficiency</div>
+                            <div class="result-value" id="efficiency">-</div>
+                            <div class="result-unit" id="efficiencyUnit">km/liter</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-label" id="costPerKmLabel">Cost per Kilometer</div>
+                            <div class="result-value" id="costPerKm">-</div>
+                            <div class="result-unit" id="costPerKmUnit">₹/km</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-label" id="totalCostLabel">Total Fuel Cost</div>
+                            <div class="result-value" id="totalCost">-</div>
+                            <div class="result-unit" id="totalCostUnit">₹</div>
+                        </div>
+                        
+                        <div class="result-card">
+                            <div class="result-label" id="ratingLabel">Efficiency Rating</div>
+                            <div class="result-value" id="rating">-</div>
+                            <div class="result-unit" id="ratingUnit">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>How to Use</h3>
+                <ol>
+                    <li>Enter the total distance you traveled in kilometers</li>
+                    <li>Input the amount of fuel consumed during the trip in liters</li>
+                    <li>Enter the current fuel price per liter</li>
+                    <li>Click "Calculate Mileage" to get your results</li>
+                </ol>
+                
+                <div class="tips">
+                    <h4>Tips for Accurate Results</h4>
+                    <ul>
+                        <li>Fill your tank completely before starting your trip</li>
+                        <li>Note the exact distance traveled using your odometer</li>
+                        <li>Fill up again at the end to measure exact fuel consumption</li>
+                        <li>Use current fuel prices for accurate cost calculations</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Mileage Calculator. Simple, accurate, and free.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

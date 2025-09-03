@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Mileage Calculator
 
 A smart, location-aware web-based mileage calculator tool that automatically detects your region and provides customized fuel efficiency calculations and travel cost analysis.
@@ -113,3 +114,6 @@ Ratings are based on regional standards:
 ## No Installation Required
 
 Simply open `index.html` in any modern web browser. No server setup or dependencies required!
+=======
+# Mileage_caci
+>>>>>>> c7f4986575bc359c6e43339f01052bea75fd83cc

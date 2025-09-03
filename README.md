@@ -114,5 +114,3 @@ Ratings are based on regional standards:
 
 Simply open `index.html` in any modern web browser. No server setup or dependencies required!
 =======
-# Mileage_caci
->>>>>>> c7f4986575bc359c6e43339f01052bea75fd83cc

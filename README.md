@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Mileage Calculator
 
 A smart, location-aware web-based mileage calculator tool that automatically detects your region and provides customized fuel efficiency calculations and travel cost analysis.
